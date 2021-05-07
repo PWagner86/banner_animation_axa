@@ -1,0 +1,300 @@
+@import 'variables';
+@import 'rules';
+
+// Buttons --------------------------------------------------->
+button{
+    position: absolute;
+    left: 2%;
+    top: 5%;
+    width: 5vmax;
+    height: 5vmin;
+    @include textTrans;    
+    font-size: 1.5vmin;
+    transition: ease-in-out .3s;
+    cursor: pointer;
+}
+
+button:hover{
+    box-shadow: 0 0 20px white;
+}
+
+.sound-btn{
+    top: 20%;
+}
+
+
+// Screen-------------------------------------------------------->
+.screen{
+    position: relative;
+    width: 1250px;
+    height: 100%;
+    overflow: hidden;
+    background: rgb(255, 174, 0);
+
+// Skyline------------------------------------------------------>
+    .skyline{
+        position: absolute;
+        width: 100%;
+        bottom: 15%;
+        z-index: 1;
+    }
+
+// Sterne------------------------------------------------------->
+    .star{
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: white;
+        box-shadow: 0 0 7px white;
+        position: absolute;
+    }
+
+// Strasse------------------------------------------------------>
+    .street{
+        position: absolute;
+        bottom: 0;
+        height: 15%;
+        width: 100%;
+        background: rgb(53, 49, 49);
+        z-index: 1;
+
+        .line{
+            position: absolute;
+            width: 15%;
+            height: 2vmin;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+        }
+
+        .line2{
+            left: 20%;
+        }
+
+        .line3{
+            left: 40%;
+        }
+
+        .line4{
+            left: 60%;
+        }
+
+        .line5{
+            left: 80%;
+        }
+
+// Autos-------------------------------------------------------->
+        .car{
+            position: absolute;
+            height: 10vmin;
+            width: auto;
+        }
+
+        .car-top{
+            bottom: 50%;
+            right: 100%;
+        }
+
+        .car-bottom{
+            bottom: 5%;
+        }
+
+// Crashautos -------------------------------------------------->
+        .crash-green,
+        .crash-red,
+        .flames{
+            position: absolute;
+            bottom: 0%;
+            height: 30vmin;
+        }
+
+    }
+
+// Mond -------------------------------------------------------->
+     .moon{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: white;
+        position: absolute;
+        bottom: 0;
+        left: 8%;
+        box-shadow: 0 0 40px white;
+    }
+
+// Handy ------------------------------------------------------->
+    .handy{
+        position: absolute;
+        width: 15vmax;
+        height: 40vmin;
+        background: url(../01_pics/phone_stars.jpeg);
+        @include backImg;
+        z-index: 20;
+        border: solid 20px black;
+        border-radius: 10px;
+        left: 70%;
+        top: 100%;
+
+        .icons{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 10%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            i{
+                margin-right: 0.5rem;
+                color: white;
+            }
+        }
+
+        h3{
+            color: white;
+            position: absolute;
+            top: 15%;
+            width: 100%;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .answer{
+            position: absolute;
+            bottom: 35%;
+            width: 100%;
+            height: 50%;
+            @include flexCenter;
+            text-align: center;
+            flex-direction: column;
+
+            .ghost-text,
+            .batman-text,
+            .axa-text{
+                display: none;
+                text-align: center;
+                font-weight: bold;
+                color: rgb(233, 52, 52);
+            }
+
+            .axa-text{
+                color: rgb(16, 197, 16);
+            }
+
+            .circle{
+                font-size: 5vmin;
+                margin-top: 2rem;
+                display: none;
+                animation: turn infinite 1s linear;
+            }
+
+            @keyframes turn{
+                0%{
+                    transform: rotate(0deg);
+                    color: rgb(28, 28, 204);
+                }
+    
+                50%{
+                    color: rgb(72, 129, 235);
+                }
+    
+                100%{
+                    transform: rotate(360deg);
+                    color: rgb(28, 28, 204);
+                }
+            }
+        }
+
+        .logo-icons{
+            position: absolute;
+            width: 100%;
+            height: 30%;
+            bottom: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+
+            img{
+                height: 5vmin;
+                width: auto;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+
+// Scheinwerfer ------------------------------------------------->
+    .scheinwerfer{
+        position: relative;
+        left: 40%;
+        bottom: 0;
+        width: 20vmax;
+        height: 100%;
+
+        .spot{
+            position: absolute;
+            width: 80%;
+            height: auto;
+            top: 10%;
+            left: 10%;
+        }
+
+        .spot-axa{
+            width: 60%;
+            height: auto;
+            position: absolute;
+            left: 5%;
+            border-radius: 50%;
+            z-index: 50;
+        }
+    }
+
+// Handshake --------------------------------------------------->
+    .handshake{
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: $trans;
+        width: 30vmax;
+        z-index: 30;
+    }
+
+// Text am Schluss --------------------------------------------->
+    .end-text{
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        width: 100%;
+        text-align: center;
+        transform: $trans;
+        text-decoration: none;
+        @include textTrans;
+        z-index: 60;
+        font-size: 4vmax;
+        color: white;
+        display: none;
+        text-align: center;
+    }
+
+    .pointer{
+        z-index: 60;
+        position: absolute;
+        left: 22%;
+        bottom: 6%;
+        transform: $trans;
+        font-size: 4vmax;
+        color: white;
+        animation: pointlink infinite ease-in-out 1s;
+        display: none;
+    }
+    
+    @keyframes pointlink {
+        50%{
+            left: 23%;
+        }
+
+        100%{
+            left: 22%;
+        }
+    }
+}

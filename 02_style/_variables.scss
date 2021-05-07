@@ -1,0 +1,22 @@
+
+$mainFont: 'Rubik', sans-serif;
+
+$trans: translate(-50%, -50%);
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin textTrans {
+    font-family: $mainFont;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+@mixin backImg {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: none;
+}

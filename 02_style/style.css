@@ -1,0 +1,372 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* ::before, * ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Rubik", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: black;
+}
+
+button {
+  position: absolute;
+  left: 2%;
+  top: 5%;
+  width: 5vmax;
+  height: 5vmin;
+  font-family: "Rubik", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.5vmin;
+  -webkit-transition: ease-in-out .3s;
+  transition: ease-in-out .3s;
+  cursor: pointer;
+}
+
+button:hover {
+  -webkit-box-shadow: 0 0 20px white;
+          box-shadow: 0 0 20px white;
+}
+
+.sound-btn {
+  top: 20%;
+}
+
+.screen {
+  position: relative;
+  width: 1250px;
+  height: 100%;
+  overflow: hidden;
+  background: #ffae00;
+}
+
+.screen .skyline {
+  position: absolute;
+  width: 100%;
+  bottom: 15%;
+  z-index: 1;
+}
+
+.screen .star {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: white;
+  -webkit-box-shadow: 0 0 7px white;
+          box-shadow: 0 0 7px white;
+  position: absolute;
+}
+
+.screen .street {
+  position: absolute;
+  bottom: 0;
+  height: 15%;
+  width: 100%;
+  background: #353131;
+  z-index: 1;
+}
+
+.screen .street .line {
+  position: absolute;
+  width: 15%;
+  height: 2vmin;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: white;
+}
+
+.screen .street .line2 {
+  left: 20%;
+}
+
+.screen .street .line3 {
+  left: 40%;
+}
+
+.screen .street .line4 {
+  left: 60%;
+}
+
+.screen .street .line5 {
+  left: 80%;
+}
+
+.screen .street .car {
+  position: absolute;
+  height: 10vmin;
+  width: auto;
+}
+
+.screen .street .car-top {
+  bottom: 50%;
+  right: 100%;
+}
+
+.screen .street .car-bottom {
+  bottom: 5%;
+}
+
+.screen .street .crash-green,
+.screen .street .crash-red,
+.screen .street .flames {
+  position: absolute;
+  bottom: 0%;
+  height: 30vmin;
+}
+
+.screen .moon {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  bottom: 0;
+  left: 8%;
+  -webkit-box-shadow: 0 0 40px white;
+          box-shadow: 0 0 40px white;
+}
+
+.screen .handy {
+  position: absolute;
+  width: 15vmax;
+  height: 40vmin;
+  background: url(../01_pics/phone_stars.jpeg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: none;
+  z-index: 20;
+  border: solid 20px black;
+  border-radius: 10px;
+  left: 70%;
+  top: 100%;
+}
+
+.screen .handy .icons {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.screen .handy .icons i {
+  margin-right: 0.5rem;
+  color: white;
+}
+
+.screen .handy h3 {
+  color: white;
+  position: absolute;
+  top: 15%;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.screen .handy .answer {
+  position: absolute;
+  bottom: 35%;
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.screen .handy .answer .ghost-text,
+.screen .handy .answer .batman-text,
+.screen .handy .answer .axa-text {
+  display: none;
+  text-align: center;
+  font-weight: bold;
+  color: #e93434;
+}
+
+.screen .handy .answer .axa-text {
+  color: #10c510;
+}
+
+.screen .handy .answer .circle {
+  font-size: 5vmin;
+  margin-top: 2rem;
+  display: none;
+  -webkit-animation: turn infinite 1s linear;
+          animation: turn infinite 1s linear;
+}
+
+@-webkit-keyframes turn {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    color: #1c1ccc;
+  }
+  50% {
+    color: #4881eb;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    color: #1c1ccc;
+  }
+}
+
+@keyframes turn {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    color: #1c1ccc;
+  }
+  50% {
+    color: #4881eb;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    color: #1c1ccc;
+  }
+}
+
+.screen .handy .logo-icons {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.screen .handy .logo-icons img {
+  height: 5vmin;
+  width: auto;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.screen .scheinwerfer {
+  position: relative;
+  left: 40%;
+  bottom: 0;
+  width: 20vmax;
+  height: 100%;
+}
+
+.screen .scheinwerfer .spot {
+  position: absolute;
+  width: 80%;
+  height: auto;
+  top: 10%;
+  left: 10%;
+}
+
+.screen .scheinwerfer .spot-axa {
+  width: 60%;
+  height: auto;
+  position: absolute;
+  left: 5%;
+  border-radius: 50%;
+  z-index: 50;
+}
+
+.screen .handshake {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 30vmax;
+  z-index: 30;
+}
+
+.screen .end-text {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  z-index: 60;
+  font-size: 4vmax;
+  color: white;
+  display: none;
+  text-align: center;
+}
+
+.screen .pointer {
+  z-index: 60;
+  position: absolute;
+  left: 22%;
+  bottom: 6%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 4vmax;
+  color: white;
+  -webkit-animation: pointlink infinite ease-in-out 1s;
+          animation: pointlink infinite ease-in-out 1s;
+  display: none;
+}
+
+@-webkit-keyframes pointlink {
+  50% {
+    left: 23%;
+  }
+  100% {
+    left: 22%;
+  }
+}
+
+@keyframes pointlink {
+  50% {
+    left: 23%;
+  }
+  100% {
+    left: 22%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
