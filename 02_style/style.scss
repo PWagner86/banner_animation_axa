@@ -125,7 +125,7 @@ button:hover{
 // Handy ------------------------------------------------------->
     .handy{
         position: absolute;
-        width: 15vmax;
+        width: 300px;
         height: 40vmin;
         background: url(../01_pics/phone_stars.jpeg);
         @include backImg;
@@ -228,7 +228,7 @@ button:hover{
         position: relative;
         left: 40%;
         bottom: 0;
-        width: 20vmax;
+        width: 300px;
         height: 100%;
 
         .spot{
@@ -240,10 +240,10 @@ button:hover{
         }
 
         .spot-axa{
-            width: 60%;
+            width: 210px;
             height: auto;
             position: absolute;
-            left: 5%;
+            left: 0;
             border-radius: 50%;
             z-index: 50;
         }
@@ -255,7 +255,7 @@ button:hover{
         top: 60%;
         left: 50%;
         transform: $trans;
-        width: 30vmax;
+        width: 600px;
         z-index: 30;
     }
 
@@ -270,7 +270,7 @@ button:hover{
         text-decoration: none;
         @include textTrans;
         z-index: 60;
-        font-size: 4vmax;
+        font-size: 4rem;
         color: white;
         display: none;
         text-align: center;
@@ -279,10 +279,10 @@ button:hover{
     .pointer{
         z-index: 60;
         position: absolute;
-        left: 22%;
+        left: 15%;
         bottom: 6%;
         transform: $trans;
-        font-size: 4vmax;
+        font-size: 4rem;
         color: white;
         animation: pointlink infinite ease-in-out 1s;
         display: none;
@@ -290,11 +290,11 @@ button:hover{
     
     @keyframes pointlink {
         50%{
-            left: 23%;
+            left: 20%;
         }
 
         100%{
-            left: 22%;
+            left: 15%;
         }
     }
 }
