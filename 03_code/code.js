@@ -260,7 +260,7 @@ helpTl
     y: screenHeight / 5,
     x: - (screenWidth / 11),
     borderRadius: 0,
-    width: "494px",
+    width: "300px",
     duration: 3
 })
 

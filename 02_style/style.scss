@@ -26,8 +26,8 @@ button:hover{
 // Screen-------------------------------------------------------->
 .screen{
     position: relative;
-    width: 1250px;
-    height: 100%;
+    width: 1000px;
+    height: 600px;
     overflow: hidden;
     background: rgb(255, 174, 0);
 
@@ -86,7 +86,7 @@ button:hover{
 // Autos-------------------------------------------------------->
         .car{
             position: absolute;
-            height: 10vmin;
+            height: 8vmin;
             width: auto;
         }
 
@@ -125,11 +125,11 @@ button:hover{
 // Handy ------------------------------------------------------->
     .handy{
         position: absolute;
-        width: 300px;
-        height: 40vmin;
+        width: 200px;
+        height: 35vmin;
         background: url(../01_pics/phone_stars.jpeg);
         @include backImg;
-        z-index: 20;
+        z-index: 100;
         border: solid 20px black;
         border-radius: 10px;
         left: 70%;
@@ -255,7 +255,7 @@ button:hover{
         top: 60%;
         left: 50%;
         transform: $trans;
-        width: 600px;
+        width: 400px;
         z-index: 30;
     }
 

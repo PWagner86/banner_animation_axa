@@ -50,8 +50,8 @@ button:hover {
 
 .screen {
   position: relative;
-  width: 1250px;
-  height: 100%;
+  width: 1000px;
+  height: 600px;
   overflow: hidden;
   background: #ffae00;
 }
@@ -110,7 +110,7 @@ button:hover {
 
 .screen .street .car {
   position: absolute;
-  height: 10vmin;
+  height: 8vmin;
   width: auto;
 }
 
@@ -145,13 +145,13 @@ button:hover {
 
 .screen .handy {
   position: absolute;
-  width: 300px;
-  height: 40vmin;
+  width: 200px;
+  height: 35vmin;
   background: url(../01_pics/phone_stars.jpeg);
   background-size: cover;
   background-position: center center;
   background-repeat: none;
-  z-index: 20;
+  z-index: 100;
   border: solid 20px black;
   border-radius: 10px;
   left: 70%;
@@ -315,7 +315,7 @@ button:hover {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 600px;
+  width: 400px;
   z-index: 30;
 }
 
